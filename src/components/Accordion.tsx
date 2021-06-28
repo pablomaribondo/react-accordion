@@ -1,6 +1,8 @@
 import { useRef, forwardRef, useEffect, RefObject } from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
 
+export type AccordionRef = HTMLDivElement[];
+
 interface AccordionProps {
   question: string;
   answer: string;
@@ -9,12 +11,11 @@ interface AccordionProps {
   duration: number;
   onClick: (
     index: number,
-    ref: RefObject<HTMLDivElement[]>,
+    ref: RefObject<AccordionRef>,
     close: (element: HTMLDivElement | null) => void
   ) => void;
 }
 
-export type AccordionRef = HTMLDivElement[];
 const Accordion = (
   {
     question,
