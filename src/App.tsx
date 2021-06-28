@@ -36,7 +36,7 @@ const App: FC = () => {
           closeOthers
           data={accordionData}
           duration={400}
-          opened={2}
+          opened={0}
         />
       </div>
     </>
